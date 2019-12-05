@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true, // alloxs you to use imports instead of require
+    "outDir": "dist", // location of build
+    "target": "es6", // version ES
+    "strict": true // force to strict type
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
