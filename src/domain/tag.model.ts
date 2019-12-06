@@ -1,7 +1,18 @@
 import sequelizeCustom from "../infra/sequelizeCustom";
-import Sequelize from "sequelize";
+import Sequelize, {BuildOptions, Model} from "sequelize";
 
-export const TagModel = sequelizeCustom.define('tag', {
+interface tagModel extends Model {
+    name?: string;
+    description?: string;
+    username?: string;
+    usage_count: 0;
+}
+
+type MyModelStatic = typeof Model & {
+    new (values?: object, options?: BuildOptions): tagModel;
+}
+
+export default <MyModelStatic>sequelizeCustom.define('tag', {
     name: {
         type: Sequelize.STRING,
         unique: true,
