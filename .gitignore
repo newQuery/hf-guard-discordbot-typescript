@@ -1,6 +1,8 @@
 # Jetbrains shit
 .idea
-
+dist
+database.sqlite
+config.json
 package-lock.json
 # Logs
 logs
